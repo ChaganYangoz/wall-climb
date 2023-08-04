@@ -6,8 +6,16 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
 
-    [SerializeField] private float speed = 10f;
-    
+    [SerializeField] private float speed = 8f;
+    [SerializeField] private bool isOnWall;
+    private float speedBackUp;
+
+    private void Start()
+    {
+        speedBackUp = speed;
+        isOnWall = false;
+        rb.velocity = Vector3.left * speed;
+    }
 
     private void Update()
     {
@@ -17,17 +25,29 @@ public class PlayerMovement : MonoBehaviour
     {
         //rb.velocity = Vector3.up * speed;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isOnWall)
         {
             Jump();
+            isOnWall = false;
+            speed = speedBackUp;
         }
     }
 
     private void Jump() 
     {
-        if (gameObject.transform.position.x < -3)
+        rb.velocity = Vector3.right * speed;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "WallRight")
         {
-            rb.velocity = Vector3.right * speed;
+            isOnWall = true;
+            speed = -speed;   
+        }
+        if (collision.gameObject.name == "WallLeft") 
+        {
+            isOnWall= true;
         }
     }
 
