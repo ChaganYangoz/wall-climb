@@ -43,12 +43,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "WallRight")
+        if (collision.gameObject.tag == "WallRight")
         {
             isOnWall = true;
             speed = -speed;   
         }
-        if (collision.gameObject.name == "WallLeft") 
+        if (collision.gameObject.tag == "WallLeft") 
         {
             isOnWall= true;
         }
