@@ -6,10 +6,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
+    [SerializeField] GameObject border;
+    WallManager wallManager;
 
     [SerializeField] private float speed;
     [SerializeField] private float verticalSpeed;
     [SerializeField] private bool isOnWall;
+    
 
     private float speedBackUp;
 
@@ -24,6 +27,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (transform.position.y > border.transform.position.y) 
+        {
+            //Debug.Log("UpdateWalls");
+            //wallManager.UpdateWalls();
+        }
         if (Input.GetKeyDown(KeyCode.Space) && isOnWall)
         {
             Jump();
