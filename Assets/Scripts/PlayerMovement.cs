@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -41,12 +42,17 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.velocity = new Vector3(rb.velocity.x, verticalSpeed , 0);
+        if (isOnWall)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, verticalSpeed, 0);
+        }
+        
     }
 
     private void Jump() 
     {
         rb.velocity = new Vector3(speed, rb.velocity.y, 0);
+        rb.AddForce(Vector3.up * math.abs(speed / 2), ForceMode.Impulse);
     }
 
     private void OnCollisionEnter(Collision collision)
