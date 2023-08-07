@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WallLeft
   - WallRight
+  - Platform
   layers:
   - Default
   - TransparentFX

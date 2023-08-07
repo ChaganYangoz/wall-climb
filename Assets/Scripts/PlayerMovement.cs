@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
             speed = speedBackUp;    
         }
-        Debug.Log(transform.position.x);
+        //Debug.Log(transform.position.x);
     }
     private void FixedUpdate()
     {
@@ -62,6 +62,13 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "WallLeft") 
         {
             isOnWall= true;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            Destroy(other);
         }
     }
 
