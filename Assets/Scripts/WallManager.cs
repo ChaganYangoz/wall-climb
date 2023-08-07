@@ -18,7 +18,6 @@ public class WallManager : MonoBehaviour
     {
         if (player.transform.position.y > border.transform.position.y)
         {
-            Debug.Log("Wallmanager Log");
             UpdateWalls();
         }   
     }
