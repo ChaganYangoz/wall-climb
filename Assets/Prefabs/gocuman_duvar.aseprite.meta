@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e3f3eb6a9eeaf4e4ca7d38cedbef8e32
+guid: 6e06f7110170e104392243d57d11f88c
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -71,7 +71,7 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -83,7 +83,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   asepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638270415991575646
+  platformSettingsDirtyTick: 638270385492083908
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: BackGround_Frame_0
+  - name: gocuman_duvar
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.9195402, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 320
-      height: 480
-    spriteID: bf68039db71d794478f7927a364d7539
+      width: 87
+      height: 960
+    spriteID: 08891e39e80394d44a2422a9add3bde4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,18 +139,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: BackGround_Frame_1
+  spriteSheetImportData:
+  - name: gocuman_duvar_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 332
+      x: 43
       y: 4
-      width: 320
-      height: 480
-    spriteID: 4759d45118f1b63478aa463fa3730850
+      width: 48
+      height: 960
+    spriteID: 813c830683ccc2947905f3d0d51ab703
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -158,88 +159,23 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 332, y: 4}
-  - name: BackGround_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 660
-      y: 4
-      width: 320
-      height: 480
-    spriteID: 3a78d23cf802ea048a7727ace2d51b42
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 660, y: 4}
-  - name: BackGround_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 492
-      width: 320
-      height: 480
-    spriteID: 0ce4c316e52d7da4982be71041481638
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 492}
-  spriteSheetImportData: []
+    uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: -1008666650
-    name: BackGround
+    guid: -128957969
+    name: gocuman_duvar
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: BackGround_Frame_0
+    - name: gocuman_duvar
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
-        width: 320
-        height: 480
-      spriteId: bf68039db71d794478f7927a364d7539
-    - name: BackGround_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 0
-        y: 0
-        width: 320
-        height: 480
-      spriteId: 4759d45118f1b63478aa463fa3730850
-    - name: BackGround_Frame_2
-      frameIndex: 2
-      cellRect:
-        x: 0
-        y: 0
-        width: 320
-        height: 480
-      spriteId: 3a78d23cf802ea048a7727ace2d51b42
-    - name: BackGround_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 0
-        y: 0
-        width: 320
-        height: 480
-      spriteId: 0ce4c316e52d7da4982be71041481638
+        width: 87
+        height: 960
+      spriteId: 08891e39e80394d44a2422a9add3bde4
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -293,4 +229,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 320, y: 480}
+  canvasSize: {x: 160, y: 960}

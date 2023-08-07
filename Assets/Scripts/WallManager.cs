@@ -7,28 +7,25 @@ public class WallManager : MonoBehaviour
     [SerializeField] GameObject anchor;
     [SerializeField] GameObject player;
     [SerializeField] GameObject border;
+    [SerializeField] Rigidbody wallRb;
+
+    [SerializeField] float speed;
     
 
     private void Awake()
     {
         gameObject.transform.position = anchor.transform.position;
     }
-
     private void Update()
     {
-        if (player.transform.position.y >= border.transform.position.y)
-        {
-            UpdateWalls();
-        }
-        if (player.transform.position.y > transform.position.y + 10)
+        if ( player.transform.position.y > transform.position.y + 5)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
         }
     }
-    public void UpdateWalls() 
+    private void FixedUpdate()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
-        border.transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
+        wallRb.velocity = Vector3.down * speed * Time.deltaTime;
     }
 }
 
