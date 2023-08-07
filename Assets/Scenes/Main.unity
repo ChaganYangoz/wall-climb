@@ -181,7 +181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189670950}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.4225001, y: 0.29, z: 0}
+  m_LocalPosition: {x: 2.5725, y: 0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchorType: 5
-  anchorOffset: {x: -0.35, y: 0, z: 0}
+  anchorOffset: {x: -0.2, y: 0, z: 0}
 --- !u!1 &220817012
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,8 +248,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 1
+  m_Constraints: 124
+  m_CollisionDetection: 0
 --- !u!65 &220817014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220817012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 220817013}
   border: {fileID: 1375810529}
-  speed: 8
+  speed: 16
   verticalSpeed: 4
   isOnWall: 0
 --- !u!1 &300953366
@@ -378,7 +378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300953366}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5025, y: 0.29, z: 0}
+  m_LocalPosition: {x: -2.6525, y: 0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchorType: 3
-  anchorOffset: {x: 0.35, y: 0, z: 0}
+  anchorOffset: {x: 0.2, y: 0, z: 0}
 --- !u!1001 &371667527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -534,7 +534,6 @@ GameObject:
   - component: {fileID: 988833785}
   - component: {fileID: 988833787}
   - component: {fileID: 988833788}
-  - component: {fileID: 988833789}
   - component: {fileID: 988833786}
   m_Layer: 0
   m_Name: WallLeft
@@ -552,7 +551,7 @@ Transform:
   m_GameObject: {fileID: 988833784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.62, y: -1.3869722, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 71893850}
@@ -573,8 +572,7 @@ MonoBehaviour:
   anchor: {fileID: 300953366}
   player: {fileID: 220817012}
   border: {fileID: 1375810529}
-  wallRb: {fileID: 988833789}
-  speed: 200
+  speed: 8
 --- !u!212 &988833787
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -648,33 +646,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 20, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &988833789
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988833784}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
 --- !u!1 &1013205944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,9 +992,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1501487542}
   - component: {fileID: 1501487544}
-  - component: {fileID: 1501487543}
   - component: {fileID: 1501487545}
-  - component: {fileID: 1501487546}
+  - component: {fileID: 1501487543}
   m_Layer: 0
   m_Name: WallRight
   m_TagString: WallRight
@@ -1040,7 +1010,7 @@ Transform:
   m_GameObject: {fileID: 1501487541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.12, y: -1.7123872, z: 0.0865653}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 71893850}
@@ -1061,8 +1031,7 @@ MonoBehaviour:
   anchor: {fileID: 189670950}
   player: {fileID: 220817012}
   border: {fileID: 1375810529}
-  wallRb: {fileID: 1501487546}
-  speed: 200
+  speed: 8
 --- !u!212 &1501487544
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1136,33 +1105,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 20, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1501487546
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501487541}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
 --- !u!1 &1815407299
 GameObject:
   m_ObjectHideFlags: 0

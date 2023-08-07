@@ -17,28 +17,47 @@ public class PlayerMovement : MonoBehaviour
 
     private float speedBackUp;
 
+    private void Awake()
+    {
+        rb.velocity = Vector3.right * speed;
+    }
     private void Start()
     {
         speed = 16f;
         verticalSpeed = 4f;
         speedBackUp = speed;
         isOnWall = false;
+
     }
 
     private void Update()
     {
-   
+        if (Input.GetKeyDown(KeyCode.Space) && isOnWall)
+        {
+            isOnWall = false;
+            Jump();
+            speed = speedBackUp;    
+        }
+        Debug.Log(transform.position.x);
     }
     private void FixedUpdate()
     {
     
     }
+    void Jump() 
+    {
+        rb.velocity = Vector3.right * speed;
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "WallRight")
         {
+            if (speed == speedBackUp)
+            {
+                speed = -speed;
+            }
             isOnWall = true;
-            speed = -speed;   
+              
         }
         if (collision.gameObject.tag == "WallLeft") 
         {

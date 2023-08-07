@@ -7,7 +7,6 @@ public class WallManager : MonoBehaviour
     [SerializeField] GameObject anchor;
     [SerializeField] GameObject player;
     [SerializeField] GameObject border;
-    [SerializeField] Rigidbody wallRb;
 
     [SerializeField] float speed;
     
@@ -25,7 +24,7 @@ public class WallManager : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        wallRb.velocity = Vector3.down * speed * Time.deltaTime;
+        transform.Translate(0, -speed * Time.deltaTime, 0);
     }
 }
 
