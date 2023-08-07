@@ -8,7 +8,7 @@ public class WallManager : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject border;
 
-    [SerializeField] float speed;
+    
     
 
     private void Awake()
@@ -17,14 +17,11 @@ public class WallManager : MonoBehaviour
     }
     private void Update()
     {
-        if ( player.transform.position.y > transform.position.y + 5)
+        if ( player.transform.position.y > transform.position.y + 2.8)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
         }
     }
-    private void FixedUpdate()
-    {
-        transform.Translate(0, -speed * Time.deltaTime, 0);
-    }
+   
 }
 

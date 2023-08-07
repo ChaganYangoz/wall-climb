@@ -6,21 +6,23 @@ using UnityEngine.PlayerLoop;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> prefabs;
+    [SerializeField] List<GameObject> spawnPos;
 
     private void Start()
     {
-        //InvokeRepeating("SpawnObstacle", 2f, 2f);
+        InvokeRepeating("SpawnObstacle", 2f, 2f);
     }
     void SpawnObstacle() 
     {
-        Instantiate(prefabs[0], RandomSpawnPos() , prefabs[0].transform.rotation, transform);
+        Instantiate(prefabs[0], RandomSpawnPos(), prefabs[0].transform.rotation);
     }
 
     Vector3 RandomSpawnPos() 
     {
-        int randomPosX;
-        randomPosX = Random.Range(0, 11);
-        return new Vector3(randomPosX, 0, 0);
+        int index;
+        index = Random.Range(0, 2);
+
+        return new Vector3(spawnPos[index].transform.position.x, spawnPos[index].transform.position.y + 6, 0);
     }
 
     
