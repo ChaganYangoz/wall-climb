@@ -46,15 +46,23 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector3(rb.velocity.x, verticalSpeed, 0);
         }
+        else if (!isOnWall)
+        {
+            Gravity();
+        }
         
     }
 
     private void Jump() 
     {
         rb.velocity = new Vector3(speed, rb.velocity.y, 0);
-        rb.AddForce(Vector3.up * math.abs(speed / 2), ForceMode.Impulse);
+        rb.AddForce(Vector3.up * verticalSpeed, ForceMode.Impulse);
     }
 
+    private void Gravity() 
+    {
+        rb.AddForce(Vector3.down * verticalSpeed / 2.5f, ForceMode.Acceleration);
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "WallRight")
