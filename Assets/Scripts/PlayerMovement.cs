@@ -63,13 +63,12 @@ public class PlayerMovement : MonoBehaviour
         {
             isOnWall= true;
         }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Platform"))
+        if (collision.gameObject.CompareTag("Platform"))
         {
-            Destroy(other);
+            Debug.Log("Collision Log With Platform");
+            Destroy(collision.gameObject);
         }
     }
+   
 
 }

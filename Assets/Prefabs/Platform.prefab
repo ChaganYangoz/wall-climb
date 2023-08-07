@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1065986031186636507}
   - component: {fileID: -6379266221379352974}
   - component: {fileID: -8330435348277995954}
-  - component: {fileID: 3048602201796072784}
+  - component: {fileID: -9208900685632179875}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Platform
@@ -30,11 +30,11 @@ Transform:
   m_GameObject: {fileID: 1320291470442689740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2, y: -2, z: 0}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1797555039570861142
 MeshFilter:
@@ -119,15 +119,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3669b7515d280c42911a3ff2ab8baf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3048602201796072784
-MonoBehaviour:
+--- !u!54 &-9208900685632179875
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320291470442689740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b7967130e3cde446bf54d93510736fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
