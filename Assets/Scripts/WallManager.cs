@@ -16,10 +16,14 @@ public class WallManager : MonoBehaviour
 
     private void Update()
     {
-        if (player.transform.position.y > border.transform.position.y)
+        if (player.transform.position.y >= border.transform.position.y)
         {
             UpdateWalls();
-        }   
+        }
+        if (player.transform.position.y > transform.position.y + 10)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
+        }
     }
     public void UpdateWalls() 
     {
