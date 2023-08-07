@@ -7,12 +7,9 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> prefabs;
 
-    public float n;
-
-
     private void Start()
     {
-        InvokeRepeating("SpawnObstacle", 2f, 2f);
+        //InvokeRepeating("SpawnObstacle", 2f, 2f);
     }
     void SpawnObstacle() 
     {
