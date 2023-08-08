@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
             Jump();
             speed = speedBackUp;    
         }
-        //Debug.Log(transform.position.x);
     }
     private void FixedUpdate()
     {
@@ -65,7 +64,6 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Platform"))
         {
-            Debug.Log("Collision Log With Platform");
             Destroy(collision.gameObject);
         }
     }
