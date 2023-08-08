@@ -20,9 +20,20 @@ public class GameManager : MonoBehaviour
     Vector3 RandomSpawnPos() 
     {
         int index;
+        float spawnPosX = 0;
         index = Random.Range(0, 2);
 
-        return new Vector3(spawnPos[index].transform.position.x, spawnPos[index].transform.position.y + 6, 0);
+        if (index == 0)
+        {
+            spawnPosX = spawnPos[index].transform.position.x + 0.9f;
+        }
+        else if (index == 1)
+        {
+            spawnPosX = spawnPos[index].transform.position.x - 1;
+        }
+
+
+        return new Vector3(spawnPosX, spawnPos[index].transform.position.y + 6, 0);
     }
 
     
