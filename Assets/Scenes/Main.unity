@@ -523,6 +523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 1320291470442689740, guid: 3376147919dbcc943ababf0a584f94ec, type: 3}
+  - {fileID: 1671152865036428895, guid: 4a0ba959172dd7643bb0ebc9d73ccf03, type: 3}
   spawnPos:
   - {fileID: 300953366}
   - {fileID: 189670950}

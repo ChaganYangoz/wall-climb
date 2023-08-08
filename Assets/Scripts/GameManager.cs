@@ -14,14 +14,28 @@ public class GameManager : MonoBehaviour
     }
     void SpawnObstacle() 
     {
-        Instantiate(prefabs[0], RandomSpawnPos(), prefabs[0].transform.rotation);
+        int index;
+        index = Random.Range(0, 2);
+        if (index == 0)
+        {
+            Instantiate(prefabs[index], RandomPlatformSpawnPos(), prefabs[index].transform.rotation);
+        }
+        /*else if (index == 1)
+        {
+            if (RandomObstacleSpawnPos().x > 0)
+            {
+                Instantiate(prefabs[index], RandomObstacleSpawnPos(), Quaternion.Euler(new ?Vector3(0, 180, 0)));
+            }
+            Instantiate(prefabs[index], RandomObstacleSpawnPos(), prefabs[index].transform.rotation);
+        }*/
+        
     }
 
-    Vector3 RandomSpawnPos() 
+    Vector3 RandomPlatformSpawnPos() 
     {
         int index;
-        float spawnPosX = 0;
         index = Random.Range(0, 2);
+        float spawnPosX = spawnPos[index].transform.position.x;
 
         if (index == 0)
         {
@@ -30,6 +44,24 @@ public class GameManager : MonoBehaviour
         else if (index == 1)
         {
             spawnPosX = spawnPos[index].transform.position.x - 1;
+        }
+
+
+        return new Vector3(spawnPosX, spawnPos[index].transform.position.y + 6, 0);
+    }
+    Vector3 RandomObstacleSpawnPos() 
+    {
+        int index;
+        index = Random.Range(0, 2);
+        float spawnPosX = spawnPos[index].transform.position.x;
+
+        if (index == 0)
+        {
+            spawnPosX = spawnPos[index].transform.position.x + 2f;
+        }
+        else if (index == 1)
+        {
+            spawnPosX = spawnPos[index].transform.position.x - 2;
         }
 
 
